@@ -11,7 +11,7 @@ curl -o better-sqlite3.md -s 'https://raw.githubusercontent.com/WiseLibs/better-
 
 echo "UPDATE projects SET readme = readfile('better-sqlite3.md') where name = 'better-sqlite3';" | sqlite3 projects.db
 
-echo "SELECT count() from projects WHERE name LIKE '%performance%' OR readme LIKE '%performance%'"
-echo "SELECT count() from projects WHERE name LIKE '%performance%' OR readme LIKE '%performance%'" | sqlite3 -box projects.db
+echo "SELECT count() from projects WHERE readme LIKE '%performance%'"
+echo "SELECT count() from projects WHERE readme LIKE '%performance%'" | sqlite3 -box projects.db
 
 npm start
